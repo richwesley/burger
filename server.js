@@ -5,7 +5,7 @@ const path = require("path");
 const app = express();
 const exphbs = require("express-handlebars");
 
-const port = 3000 || process.env.PORT;
+var port = server.listen(process.env.PORT || 3000);
 
 app.use(express.static("public"));
 
