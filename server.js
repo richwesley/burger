@@ -5,7 +5,9 @@ const path = require("path");
 const app = express();
 const exphbs = require("express-handlebars");
 
-var port = process.env.PORT || CONFIG.port;
+// const port = 3000 || process.env.PORT;
+const PORT = process.env.PORT || 3000;
+
 
 app.use(express.static("public"));
 
@@ -23,4 +25,4 @@ var routes = require("./controllers/burger_controller.js");
 
 app.use("/", routes);
 
-app.listen(port);
+app.listen(PORT);
